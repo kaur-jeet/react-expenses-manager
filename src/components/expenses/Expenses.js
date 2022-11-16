@@ -13,25 +13,31 @@ const Expenses = (props) => {
   }
   
 
-  const renderExpensesList  = props.expenses.map((item) => {
-    return (
-      <ExpenseItem
-         key={item.id}
-        title={item.title}
-        amount={item.amount}
-        date={item.date}
-      />
-    )
-  })
+  // const renderExpensesList  = props.expenses.map((item , index) => {
+  //   return (
+  //     <ExpenseItem
+  //        key={item.id}
+  //       title={item.title}
+  //       amount={item.amount}
+  //       date={item.date}
+  //     />
+  //   )
+  // })
 
 
   return (
 
     <Card className='expenses'>
       <ExpenseFilter  selected={filteredYear} onChangeFilter={filterChangeHandler }/>
-      {
-        renderExpensesList
-      }
+      {/* {
+        {props.expenses.map((item , index) => {
+        <ExpenseItem
+        key={item.id}
+       title={item.title}
+       amount={item.amount}
+       date={item.date}
+     />
+      } */}
       {/* <ExpenseItem
       title={props.expenses[0].title}
       amount={props.expenses[0].amount}
